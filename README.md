@@ -103,3 +103,5 @@ main.elf: main.o square.o
 	$(CC) -Og -o $@ $^
 
 ```
+
+# Any help or improvements are welcome
