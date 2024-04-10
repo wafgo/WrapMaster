@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./images/WrapMasterLogo.png" width="500" height="500">
+<img src="./images/WrapMasterLogo.jpeg" width="500" height="500">
 </p>
 
 # WrapMaster
