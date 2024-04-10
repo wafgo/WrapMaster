@@ -23,7 +23,7 @@ The example contains two source files **main.c** and **square.c** and a **Makefi
 
 The example wraps the function **square()** which is implemented in **square.c**. The main function calls the first time **sqare()** directly and a second time through a function pointer **fp**. 
 
-As the function pointer **fs** which points to **square()** is placed inside the same compilation unit as **square()**, using the **--wrap=square** linker option will __not__ work as expecte. The direct call to **square()** will be redirected through the **__wrap_square()** whereas the call through the function pointer **fs** wil __not__ be redirected. Please give it a try to verify that this is really true. 
+As the function pointer **fs** (which points to **square()**) is placed inside the same compilation unit as **square()**, using the **--wrap=square** linker option will __not__ work as expecte. The direct call to **square()** will be redirected through the **__wrap_square()** whereas the call through the function pointer **fs** wil __not__ be redirected. Please give it a try to verify that this is really true. 
 
 Utilizing **WrapMaster.py** as shown in the files will make it work and both calls will be redirected through the wrapper.
 
