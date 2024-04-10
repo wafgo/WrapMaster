@@ -16,7 +16,7 @@ The --wrap option does not allow interception of function calls within the same 
 
 WrapMaster is a simple Python script (**WrapMaster.py**) and designed to overcome the limitations of the **--wrap** option by mimicking its behavior and allowing interception of calls within the same compilation unit. It achieves this by modifying the relocatable object files through the awesome LIEF tool, which is detailed at [**LIEF’s GitHub repository**](https://github.com/lief-project/LIEF).
 
-Additionally the tool can be used with every compiler generating valid ELF relocatable object files without the need to be supported by the toolchain.
+Additionally the tool can be used with every compiler generating valid ELF relocatable object files without the need that **--wrap** hast to be supported by the toolchain.
 ## Setting Up the Environment
 
 The tool is depending on python3 which needs to be installed and [**LIEF**](https://github.com/lief-project/LIEF), which is the only required module. You can either install it in your python environment by running
