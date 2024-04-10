@@ -82,7 +82,7 @@ clean:
 
 %.o: %.c
 	$(CC) -Og -c -o $@ $<
-	$(PYTHON) $(WRAP_MASTER_PATH)WrapMaster.py -wsquare $@
+	$(PYTHON) $(WRAP_MASTER_PATH)WrapMaster.py -w square $@
 
 main.elf: main.o square.o
 	$(CC) -Og -o $@ $^
