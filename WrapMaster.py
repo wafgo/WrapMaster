@@ -8,6 +8,12 @@ import sys
 
 logging.basicConfig(level=logging.WARNING)
 
+script_version_major = "0"
+script_version_minor = "1"
+script_version_patch = "1"
+
+script_version = 'v' + script_version_major + '.' + script_version_minor + '.' + script_version_patch
+
 def make_undef_wrap_symbol(name):
     """
     creates an UNDEF symbol so it can be connected to the relocation. This is only needed if you want to wrap
@@ -53,8 +59,16 @@ if __name__ == '__main__':
                         action='append', type=str)
     parser.add_argument("object_files", nargs='+',
                         help="file(s) containing the application in the relocatable object file")
+    parser.add_argument("-v", "--version",
+                        help="print the tool version and exit")
+
+    if '-v' in sys.argv:
+        print("{} {}".format(os.path.splitext(os.path.basename(sys.argv[0]))[0], script_version))
+        sys.exit(0)
+
     args = parser.parse_args()
 
+        
     if args.config_file != '':
         if not os.path.isfile(args.config_file):
             logging.error(f"Can't find {args.config_file}. Exiting")
