@@ -10,11 +10,11 @@ This tool stands out by enabling the wrapping of function calls to symbols defin
 
 
 ## Why use WrapMaster?
-Function Call Interception with GNU Linker The GNU linker, along with other proprietary linkers, provides a --wrap option for developers looking to intercept function calls. This option allows you to replace any function call with your own implementation, which in turn can call the original function under the __real_ function prefix. Detailed information on this interception mechanism is available in the GNU Linker documentation (https://linux.die.net/man/1/ld).
+The GNU linker, along with other proprietary linkers, provides a --wrap option for developers looking to intercept function calls. This option allows you to replace any function call with your own implementation, which in turn can call the original function under the __real_ function prefix. Detailed information on this interception mechanism is available in the GNU Linker documentation (https://linux.die.net/man/1/ld).
 
-Limitations of the --wrap Option The --wrap option does not allow interception of function calls within the same compilation unit. This limitation has been discussed and documented in various resources, such as https://github.com/hedayat/powerfake/issues/2 and https://stackoverflow.com/questions/13961774/gnu-gcc-ld-wrapping-a-call-to-symbol-with-caller-and-callee-defined-in-the-sam.
+The --wrap option does not allow interception of function calls within the same compilation unit. This limitation has been discussed and documented in various resources, such as https://github.com/hedayat/powerfake/issues/2 and https://stackoverflow.com/questions/13961774/gnu-gcc-ld-wrapping-a-call-to-symbol-with-caller-and-callee-defined-in-the-sam.
 
-**WrapMaster**: A Solution to the Limitation WrapMaster is designed to overcome the limitations of the --wrap option by mimicking its behavior and allowing interception of calls within the same compilation unit. It achieves this by modifying the relocatable object files through the LIEF Python library, which is detailed at LIEF’s GitHub repository.
+A Solution to the Limitation WrapMaster is designed to overcome the limitations of the --wrap option by mimicking its behavior and allowing interception of calls within the same compilation unit. It achieves this by modifying the relocatable object files through the LIEF Python library, which is detailed at LIEF’s GitHub repository.
 
 ## Usage
 Here is a short example how the tool can be utilized to wrap a function.
