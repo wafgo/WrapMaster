@@ -16,6 +16,8 @@ The --wrap option does not allow interception of function calls within the same 
 
 A Solution to the Limitation WrapMaster is designed to overcome the limitations of the --wrap option by mimicking its behavior and allowing interception of calls within the same compilation unit. It achieves this by modifying the relocatable object files through the awesome LIEF tool, which is detailed at [**LIEF’s GitHub repository**](https://github.com/lief-project/LIEF).
 
+Additionally the tool can be used with every compiler generating valid ELF relocatable object files without the need to be supported by the toolchain.
+
 ## Usage
 
 Here is an example how the tool can be utilized to wrap a function.
