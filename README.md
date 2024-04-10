@@ -14,7 +14,7 @@ The GNU linker, along with other proprietary linkers, provides a --wrap option f
 
 The --wrap option does not allow interception of function calls within the same compilation unit. This limitation has been discussed and documented in various resources, such as https://github.com/hedayat/powerfake/issues/2 and https://stackoverflow.com/questions/13961774/gnu-gcc-ld-wrapping-a-call-to-symbol-with-caller-and-callee-defined-in-the-sam.
 
-A Solution to the Limitation WrapMaster is designed to overcome the limitations of the --wrap option by mimicking its behavior and allowing interception of calls within the same compilation unit. It achieves this by modifying the relocatable object files through the awesome LIEF tool, which is detailed at [**LIEF’s GitHub repository**](https://github.com/lief-project/LIEF).
+WrapMaster is a simple Python script (**WrapMaster.py**) and designed to overcome the limitations of the **--wrap** option by mimicking its behavior and allowing interception of calls within the same compilation unit. It achieves this by modifying the relocatable object files through the awesome LIEF tool, which is detailed at [**LIEF’s GitHub repository**](https://github.com/lief-project/LIEF).
 
 Additionally the tool can be used with every compiler generating valid ELF relocatable object files without the need to be supported by the toolchain.
 
