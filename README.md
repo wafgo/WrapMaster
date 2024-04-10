@@ -17,7 +17,10 @@ The --wrap option does not allow interception of function calls within the same 
 A Solution to the Limitation WrapMaster is designed to overcome the limitations of the --wrap option by mimicking its behavior and allowing interception of calls within the same compilation unit. It achieves this by modifying the relocatable object files through the LIEF Python library, which is detailed at LIEF’s GitHub repository.
 
 ## Usage
-Here is a short example how the tool can be utilized to wrap a function.
+
+Here is an example how the tool can be utilized to wrap a function.
+Most likely you do not want to use the tool as a standalone tool but somehow integrate it into your Buildprocess, which allow **WrapMaster.py** to modify all object files from which your project is composed.
+This example shows how it can be integrated for a GNU Make based project. For the invokation of the tool look at the [**"Makefile**](#Makefile))
 
 The example contains two source files **main.c** and **square.c** and a **Makefile**. 
 
