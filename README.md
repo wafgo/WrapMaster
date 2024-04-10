@@ -20,7 +20,7 @@ A Solution to the Limitation WrapMaster is designed to overcome the limitations 
 
 Here is an example how the tool can be utilized to wrap a function.
 Most likely you do not want to use the tool as a standalone tool but somehow integrate it into your Buildprocess, which allow **WrapMaster.py** to modify all object files from which your project is composed.
-This example shows how it can be integrated for a GNU Make based project. For the invocation of the tool is shown [**"here"**](#Makefile))
+This example shows how it can be integrated for a GNU Make based project. For the invocation of the tool is shown [**"here"**](#Makefile)
 
 The example contains two source files **main.c** and **square.c** and a **Makefile**. 
 
